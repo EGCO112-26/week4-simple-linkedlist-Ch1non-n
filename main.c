@@ -19,7 +19,7 @@ int main(int argc, char *argv[]){
 
         temp->link = (nodePtr)malloc(sizeof(struct std_node));
         temp = temp->link;
-        temp->id = atoi(argv[(2 * i) - 1]);
+        temp->id = atoi(argv[(2 * i) + 1]);
         strcpy(temp->name, argv[(2 * i) + 2]);
         i++;
     }
