@@ -26,8 +26,13 @@ int main(int argc, char *argv[]){
     temp->link = NULL;
 
     temp = head;
-    while(temp != NULL){
-        printf("%d %s\n", temp->id, temp->name);
+    // while(temp != NULL){
+    //     printf("%d %s\n", temp->id, temp->name);
+    //     temp = temp->link;
+    // }
+    for(i = 1; i <= N; i++){
+        printf("%d %s", temp->id, temp->name);
+        if(i < N)printf("\n");
         temp = temp->link;
     }
 
