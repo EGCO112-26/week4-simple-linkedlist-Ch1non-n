@@ -5,6 +5,8 @@
 
 int main(int argc, char *argv[]){
 
+    if(argc < 3) return 0; // test1 failed
+
     int N = argc / 2;
     typedef struct std_node *nodePtr;
     nodePtr head, temp;
@@ -36,7 +38,14 @@ int main(int argc, char *argv[]){
         temp = temp->link;
     }
 
-    while(head != NULL){
+    // while(head != NULL){
+    //     temp = head;
+    //     head = head->link;
+    //     free(temp);
+    // }
+
+
+    for(int i = 1; i<=N; i++){
         temp = head;
         head = head->link;
         free(temp);
